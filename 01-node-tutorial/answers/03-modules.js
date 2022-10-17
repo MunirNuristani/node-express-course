@@ -1,0 +1,10 @@
+//Modules for Node.js
+const names = require('./04-names')
+const sayHi = require('./05-utils')
+const data = require('./06-alternative-flavor')
+require('./07-mind-grenade')
+// console.log(data)
+sayHi('Alina')
+sayHi(names.musa)
+sayHi(names.munir)
+sayHi(data.singlePerson.name)
