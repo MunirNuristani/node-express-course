@@ -33,9 +33,9 @@ const products = [
   },
 ]
 const people = [
-  { id: 1, name: 'john' },
-  { id: 2, name: 'peter' },
-  { id: 3, name: 'susan' },
+  { id: 1, name: 'Musa' },
+  { id: 2, name: 'Alina' },
+  { id: 3, name: 'Peter' },
   { id: 4, name: 'anna' },
   { id: 5, name: 'emma' },
 ]
