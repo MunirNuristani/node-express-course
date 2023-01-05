@@ -1,0 +1,25 @@
+Answer 1: The asyncwrapper function was created to handle errors more effeciently. With the help of asyncwrapper we can consolidate code and streamline the error message.
+
+
+
+Answer 2:
+
+class CustomAPIError extends Error{
+    constructor( message, statusCode){
+        super(message)
+        this.statusCode = statusCode
+    }
+}
+
+const createCustomError = (msg, statusCode) => {
+    return new CustomAPIError(msg, statusCode)
+}
+
+const getTask = asyncWrapper(async (req, res, next) => {
+  const { id: taskID } = req.params;
+  const task = await Task.findOne({ _id: taskID });
+  if (!task) {
+    createCustomError("Not Found", 404)
+  }
+  res.status(200).json({ task });
+});
